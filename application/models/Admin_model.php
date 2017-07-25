@@ -7,14 +7,14 @@ class Admin_model extends CI_Model {
     public $kolona;
     public $limit;
     public $offset;
-    
+	
     public function __construct() {
         parent::__construct();
         $this->load->database();
     }
 
     public function dohvatiUsere() {
-          $string = "";
+        $string = "";
         if (isset($this->limit)) {
             $string .= " LIMIT " . $this->limit;
         }

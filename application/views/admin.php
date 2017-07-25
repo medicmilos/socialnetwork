@@ -41,6 +41,8 @@
 </div>";
             }
             ?>
+			
+			<?php if(!(isset($updateK) || isset($updateM) || isset($updateP) || isset($updatePost) || isset($updateC) || isset($dodajK)|| isset($dodajM)|| isset($dodajPost)|| isset($dodajComment)|| isset($dodajPoll) )){ ?>
             <div class="page-header users-header">
                 <h2>
 
@@ -53,6 +55,9 @@
                     ?>" class="btn btn-primary">Add a new</a> 
                 </h2>
             </div>
+			
+			<?php } ?>
+			
             <?php
             echo $this->session->flashdata("obavestenje");
             echo $this->session->flashdata("lobavestenje");
@@ -149,7 +154,6 @@
 
                         echo form_close();
                         echo "</div></div></div>";
-                        
                     } else if (isset($updateM)) {
                         echo anchor("Admin/menu", "Go back");
                         echo "<div class='container'><div class='row equal'><div class=' col-sm-offset-4'>";
@@ -183,7 +187,6 @@
 
                         echo form_close();
                         echo "</div></div></div>";
-                       
                     } else if (isset($updateP)) {
                         echo anchor("Admin/poll", "Go back");
                         echo "<div class='container'><div class='row equal'><div class=' col-sm-offset-4'>";
@@ -344,12 +347,12 @@
                         }
                     }
                     ?>      
-                </tbody> 
-            </table> 
+                </tbody>
+            </table>
 
             <?php
             if (isset($dodajK)) {
-                echo anchor("Admin/posts", "Go back");
+                echo anchor("Admin", "Go back");
                 echo "<div class='container'><div class='row equal'><div class=' col-sm-offset-4'>";
                 echo validation_errors();
                 echo form_open('Admin/add/korisnik');
@@ -460,7 +463,7 @@
                 echo form_close();
                 echo "</div></div></div>";
             } else if (isset($dodajPoll)) {
-                echo anchor("Admin/comments", "Go back");
+                echo anchor("Admin/poll", "Go back");
                 echo "<div class='container'><div class='row equal'><div class=' col-sm-offset-4'>";
                 echo validation_errors();
                 echo form_open('Admin/add/poll');
@@ -486,5 +489,5 @@
             }echo $this->pagination->create_links();
             ?> 
 
-        </div>  
+        </div>
     </div>

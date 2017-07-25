@@ -9,8 +9,7 @@ class MY_Controller extends CI_Controller {
 
         $this->initHead();
         $this->load->view('head', $this->podaci);
-        $this->load->library("pagination");
-        
+		 $this->load->library("pagination");
     }
 
     public function ucitajLeviMenuSajta() {
@@ -41,8 +40,8 @@ class MY_Controller extends CI_Controller {
         $this->podaci['meta'] = array(
             array('name' => 'viewport', 'content' => 'width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;'),
             array('name' => 'robots', 'content' => 'no-cache'),
-            array('name' => 'description', 'content' => 'Sajt za php 2'),
-            array('name' => 'keywords', 'content' => 'Neke reci'),
+            array('name' => 'description', 'content' => 'Connect with friends, family and other people you know. Share posts and get updates.'),
+            array('name' => 'keywords', 'content' => 'Social network, user, network, people, post, comment, Milos Medic'),
             array('name' => 'Content-type', 'content' => 'text/html; charset=utf-8', 'type' => 'equiv')
         );
 
@@ -50,15 +49,17 @@ class MY_Controller extends CI_Controller {
         $this->podaci['links'][] = link_tag('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css', 'stylesheet');
         $this->podaci['links'][] = link_tag('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css', 'stylesheet');
         $this->podaci['links'][] = link_tag('css/style.css');
+		
         $this->podaci['links'][] = link_tag('css/lightbox.min.css');
     }
 
     function time_elapsed_string($datetime, $full = false) {
-        $now = new DateTime;
-        $ago = new DateTime($datetime);
-        
+        $now = new DateTime();
+		$now->modify('+ 1 hour');
+        $ago = new DateTime($datetime); 
+		
         $diff = $now->diff($ago);
-        
+
         $diff->w = floor($diff->d / 7);
         $diff->d -= $diff->w * 7;
 

@@ -1,9 +1,8 @@
 <?php
 
 class Gallery_model extends CI_Model {
-    public $limit;
+  public $limit;
     public $offset;
-    
     public function __construct() {
         parent::__construct();
         $this->load->database();

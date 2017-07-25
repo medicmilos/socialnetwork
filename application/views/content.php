@@ -1,4 +1,4 @@
- <div class="container">
+<div class="container">
     <div class="row equal">
 
         <div class="aside-left-parent col-xs-12 col-sm-3">  
@@ -74,8 +74,7 @@
                                     if ($value4->id_post == $value3->id_post) {
                                         
                                         $phpdate = date("d M", strtotime($value4->time))." at ".date("g:i a", strtotime($value4->time));
-                                        //$phpdate = date("d M \a\t\ g:i a ", strtotime($value3->time));
-                                        //12 Mar at 2:58 pm
+                                        
                                         $komentar .= "
 					<div class='commentblk profileRight4Inner1 col-xs-12 col-sm-12'><div class='profileRight4Inner12 col-xs-12 col-sm-12'><img src=" . base_url() . "images/members/" . $value4->avatar . "" . " width='200' height='201' " . " ><div class='usercontent'><div class='flname'><a href='" . base_url() . "Profile/user/" . $value4->id_korisnik . "'>" . $value4->FirstName . " " . $value4->LastName . "</a></div><div class='posttime'>" . $phpdate . "</div></div></div><div class='profileRight4Inner12 col-xs-12 col-sm-12'><div class='descuser'>" . $value4->comment . "</div></div></div><br/>";
                                     }
@@ -142,7 +141,7 @@
                     }
                 }
                 ?>
-                <div class="container">
+                <div class="container col-xs-12 col-sm-12" style="padding-left: 40%;">
                     <div class="row equal">
                         <div class="col-xs-12 col-sm-8"> 
                             <?php if (isset($podaciOpostu)) { ?>

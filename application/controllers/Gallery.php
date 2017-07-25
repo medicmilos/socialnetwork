@@ -15,17 +15,16 @@ class Gallery extends MY_Controller {
         $this->podaci['desniMenu'] = $menu;
         $menu = $this->ucitajFooterMenuSajta();
         $this->podaci['footerMenu'] = $menu;
-        $this->load->model("Gallery_model","galerija");
+		$this->load->model("Gallery_model","galerija");
     }
 
     public function index() {
-        $this->load->library("pagination");
+              $this->load->library("pagination");
         $this->load->view('header');
-         //paginacija postova
-            $this->load->model('Posts_model', 'posts');
+         //paginacija postova 
             $data['total_rows'] = $this->galerija->brojSlika();
             $data['base_url'] = base_url() . "Gallery/index/";
-            $data['per_page'] = 3;
+            $data['per_page'] = 4;
             $data['num_links'] = 2;
             $data['full_tag_open'] = "<ul class='pagination'>";
             $data['full_tag_close'] = "</ul>";
@@ -47,14 +46,13 @@ class Gallery extends MY_Controller {
         
           //paginacija
             $this->pagination->initialize($data);
-            $this->galerija->limit = 3;
+            $this->galerija->limit = 4;
 
             if ($this->uri->segment(3) != null) {
                 $this->galerija->offset = $this->uri->segment(3);
             } else {
                 $this->galerija->offset = 0;
             }
-        
         
         $rez=$this->galerija->dohvatiSlike();
         $this->podaci["galerija"]=$rez; 

@@ -235,7 +235,7 @@ function ajaxLike(id) {
     } else {
         xhttp = new ActiveXObject("Microsoft.XMLHTTP");
     }
-    xhttp.open("POST", "http://localhost:1234/network/Ajax/dodajLike/" + id, true);
+    xhttp.open("POST", "http://network.milosmedic.com/Ajax/dodajLike/" + id, true);
     xhttp.send();
     xhttp.onreadystatechange = function () {
         if (xhttp.readyState == 4 && xhttp.status == 200) {

@@ -40,10 +40,7 @@
                     <img class="img-responsive" src="<?php echo $base_url; ?>images/milos.png" alt="Milos MEdic" />
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                    <p class="about_author">I am a student currently living in Belgrade(Serbia) and I am on the third year of ICT collage, which is a great school for learning about internet technologies.
-                        I am interested in Web development, and I have created different sites using HTML(5), CSS(3), JavaScript, jQuery, AJAX, PHP, MySQL and I'm familiar with basics of Git and responsive design technology - Bootstrap.
-                        I've also learned about basic programing with languages Java and C#.
-                        I'm a sociable and hardworking person, my goal is to find a company which can provide me, as a beginner, with valuable instructions and informations and I am interested in volunteering to gain experience in the field.</p>
+                    <p class="about_author">My name is Miloš Medić, I'am a student currently living in Belgrade(Serbia) and I'am on the third year of ICT college, which is a great school for learning about internet technologies. I'am interested in web development, and I have created different websites using HTML(5), CSS(3), JavaScript, jQuery, AJAX, PHP, MySQL and I'm familiar with basics of Git and responsive design technology - Bootstrap. I've also learned about basics programing with languages Java and C#. I'm a sociable and hardworking person, my goal is to find a company which can provide me, as a beginner with valuable instructions and informations, and I'am interested in internship or volunteering to gain experience in the field.</p>
                 </div>
             </div>
         </div>

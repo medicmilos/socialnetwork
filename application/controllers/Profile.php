@@ -66,8 +66,7 @@ class Profile extends MY_Controller {
             $this->podaci["dalijeSubscribed"] = $subs;
             //dohvati da li je subscribe ili ne BROJ
             $this->load->model("Korisnik_model");
-            $subs = $this->Korisnik_model->subscribedNumber($id);
-            var_dump($subs);
+            $subs = $this->Korisnik_model->subscribedNumber($id); 
             $this->podaci["dalijeSubscribedBroj"] = $subs;
             //svi subscriberi koji se prikazuju na profilu korisnika
             $this->load->model("Korisnik_model");

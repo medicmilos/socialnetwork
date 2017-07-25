@@ -73,7 +73,7 @@ class Logovanje extends MY_Controller {
                 }
             } else {
                 echo "nismo ga registrovali";
-                //Ako postoji greska sa bazom, nema drugog nacina_ da se dodje ovde
+				
                 $this->podaci['greska_baza'] = "Sorry, we have a problem with your registration, please try again later.";
             }
         }

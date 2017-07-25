@@ -15,8 +15,7 @@ class Admin extends MY_Controller {
     }
 
     public function index() {
-        
-         //paginacija postova 
+		//paginacija postova 
             $data['total_rows'] = $this->admin->brojKorisnika();
             $data['base_url'] = base_url() . "Admin/index/";
             $data['per_page'] = 3;
@@ -45,6 +44,7 @@ class Admin extends MY_Controller {
             } else {
                 $this->admin->offset = 0;
             }
+			
         $useri = $this->admin->dohvatiUsere();
         $this->data['useri'] = $useri;
         $this->data['klasa1'] = "active";

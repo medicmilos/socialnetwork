@@ -7,7 +7,7 @@ class Posts_model extends CI_Model {
     public $description;
     public $time;
     public $limit;
-    public $offset;
+    public $offsett;
     public $FirstName;
     public $LastName;
     public $avatar;

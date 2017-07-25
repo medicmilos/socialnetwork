@@ -34,9 +34,11 @@
             </nav>
         </div>
 
-        <div class="col-xs-12 col-sm-6">
-            <div class="whatisnew2 col-xs-12 col-sm-12 col-sm-offset-0.5">
-
+        <div class="col-xs-12 col-sm-6" style="
+    text-align: center;
+">
+            <div class="whatisnew2 col-xs-12 col-sm-12 col-sm-offset-0.5" style="text-align:center">
+			<h4>Social network users</h4>
                 <div id="galerija">  
                     <?php
                     echo "<div class='red_slika'>";
@@ -54,10 +56,8 @@
                     }
                     echo "<div class='cisti'></div></div>";
                     ?>
-                    
                 </div>
-               
-            </div> <?php echo $this->pagination->create_links(); ?>
+            </div><?php echo $this->pagination->create_links(); ?>
         </div>
 
         <div class="aside-right-parent col-xs-12 col-sm-3">

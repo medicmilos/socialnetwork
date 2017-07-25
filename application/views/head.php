@@ -14,6 +14,7 @@
         <link rel="stylesheet" href="http://formvalidation.io/vendor/formvalidation/css/formValidation.min.css">
         <script src="http://formvalidation.io/vendor/formvalidation/js/formValidation.min.js"></script>
         <script src="http://formvalidation.io/vendor/formvalidation/js/framework/bootstrap.min.js"></script>
+		<link rel="shortcut icon" type="image/x-icon" href="<?php echo $base_url; ?>images/favicon.ico">
 
         <script type="text/javascript" src="<?php echo $base_url; ?>js/main.js"></script> 
         <script type="text/javascript" src="<?php echo $base_url; ?>js/bootstrap-progressbar.js"></script>  

@@ -41,7 +41,7 @@ class Feed extends MY_Controller {
             $this->load->model('Posts_model', 'posts');
             $data['total_rows'] = $this->posts->brojPostova();
             $data['base_url'] = base_url() . "Feed/index/";
-            $data['per_page'] = 3;
+            $data['per_page'] = 5;
             $data['num_links'] = 2;
             $data['full_tag_open'] = "<ul class='pagination'>";
             $data['full_tag_close'] = "</ul>";
@@ -92,7 +92,7 @@ class Feed extends MY_Controller {
             $this->podaci["podaciZaAnketuOdgovori"] = $rezultat2;
             //paginacija
             $this->pagination->initialize($data);
-            $this->posts->limit = 3;
+            $this->posts->limit = 5;
 
             if ($this->uri->segment(3) != null) {
                 $this->posts->offset = $this->uri->segment(3);
